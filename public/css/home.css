@@ -4,7 +4,6 @@ body {
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: black;
-  
 }
 
 #myVideo {
@@ -13,6 +12,7 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  opacity: 0.5;
 }
 
 .content {
@@ -20,8 +20,8 @@ body {
   bottom: 0;
   color: #f1f1f1;
   width: 100%;
-  padding-left: 400px;
-  padding-bottom: 200px;
+  padding-left: 35%;
+  padding-bottom: 8%;
 }
 
 #b1 {
@@ -35,8 +35,7 @@ body {
 }
 
 #l1 {
-  width: 250px;
-  height: 100px;
+  height: 4rem;
   margin-left: 0px;
 }
 
