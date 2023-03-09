@@ -1,6 +1,10 @@
 {
-  "name": "auto",
+  "name": "carsewa",
   "version": "0.0.0",
+  "author": {
+    "name": "carsewa",
+    "email": "mail@carsewa.com"
+  },
   "private": true,
   "scripts": {
     "start": "node ./bin/www"

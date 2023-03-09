@@ -30,7 +30,7 @@ const db = async () => {
     } catch (err) {
         console.log("MongoDB Error : Failed to connect");
         console.log(err);
-        process.exit(1);
+        // process.exit(1);
     }
 }
 
