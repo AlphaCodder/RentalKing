@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -14,6 +14,7 @@ const adminRouter = require('./routes/admin');
 // const contactRouter = require('./routes/contact');
 var UserModel = require("./models/CustomerModel");
 const app = express();
+
 
 //Connecting to Mongodb
 const db = async () => {
@@ -53,17 +54,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 
-
-// make the app run on 0.0.0.0/port instead of localhost:port
-app.set('trust proxy', true);
-
-// set the port of our application
-// process.env.PORT lets the port be set by Heroku
-
-app.listen(process.env.PORT, function () {
-  console.log('Example app listening on port ' + process.env.PORT + '!');
-});
-
+console.log(`App running on Localhost: ${process.env.PORT}`);
 
 
 // Routing
