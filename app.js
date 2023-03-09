@@ -1,3 +1,4 @@
+require("dotenv").config();
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -14,11 +15,10 @@ const adminRouter = require('./routes/admin');
 var UserModel = require("./models/CustomerModel");
 const app = express();
 
-
 //Connecting to Mongodb
 const db = async () => {
     try {
-        const conn = await mongoose.connect(process.env.DB_URI, {
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useFindAndModify: false
@@ -60,10 +60,8 @@ app.set('trust proxy', true);
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 
-var port = process.env.PORT || 3000;
-
-app.listen(port, function () {
-  console.log('Example app listening on port ' + port + '!');
+app.listen(process.env.PORT, function () {
+  console.log('Example app listening on port ' + process.env.PORT + '!');
 });
 
 
