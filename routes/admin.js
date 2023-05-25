@@ -49,7 +49,7 @@ router.post("/login", async function (req, res) {
     console.log(user);
     if (pass == user.password) {
         console.log("Login Success");
-        res.redirect("home");
+        res.redirect("admin_index");
     } else {
         res.redirect("login_error");
     }
@@ -223,11 +223,11 @@ router.post('/uploadimage', (req, res) => {
             }
             else {
                 console.log(req.file);
-                res.redirect("/admin");
+                res.redirect("/admin/admin_index");
             }
         }
 
-    });
+    }); 
 
 });
 

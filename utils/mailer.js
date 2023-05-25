@@ -13,9 +13,9 @@ async function sendEmail(clientEmail) {
     });
 
     var mailOptions = {
-        from: "xxxx@gmail.com",
+        from: "rentalking@gmail.com",
         to: clientEmail,
-        subject: "Autorizz Service Update",
+        subject: "RentalKing Service Update",
         html: htmlTemp
     };
 
