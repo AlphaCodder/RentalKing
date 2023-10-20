@@ -1,9 +1,9 @@
 {
-  "name": "carsewa",
-  "version": "0.0.0",
+  "name": "rentalking",
+  "version": "0.0.1",
   "author": {
-    "name": "carsewa",
-    "email": "mail@carsewa.com"
+    "name": "Kumar Shivam",
+    "email": "kumars23279+RentalKing@gmail.com"
   },
   "private": true,
   "scripts": {
