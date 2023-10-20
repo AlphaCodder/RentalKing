@@ -12,16 +12,21 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
 }
 
 .content {
-  position: fixed;
   bottom: 0;
   color: #f1f1f1;
   width: 100%;
-  padding-left: 35%;
-  padding-bottom: 8%;
 }
 
 #b1 {
@@ -35,8 +40,8 @@ body {
 }
 
 #l1 {
-  height: 40rem;
-  margin-left: 0px;
+  height: 65vh;
+  margin: 0px 0px auto;
 }
 
 p {

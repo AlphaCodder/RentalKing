@@ -11,7 +11,7 @@ const compression = require('compression');
 const electricRouter = require('./routes/electric_index');
 const gasRouter = require('./routes/gas_index');
 const adminRouter = require('./routes/admin');
-// const contactRouter = require('./routes/contact');
+const contactRouter = require('./routes/contact_index');
 var UserModel = require("./models/CustomerModel");
 const app = express();
 
@@ -54,7 +54,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 
-console.log(`App running on Localhost: ${process.env.PORT}`);
+console.log(`App running on http://localhost:${process.env.PORT}`);
 
 
 // Routing
@@ -70,7 +70,7 @@ app.get('/home', function (req, res) {
 app.use('/admin', adminRouter);
 app.use('/electric', electricRouter);
 app.use('/gas', gasRouter);
-// app.use('/contact', contactRouter);
+app.use('/contact', contactRouter);
 
 
 
@@ -103,7 +103,7 @@ app.use(function (err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.sendFile(__dirname + "/routes/error.html");
 });
 
 module.exports = app;
