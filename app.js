@@ -62,6 +62,10 @@ app.get('/', (req, res) => {
     res.redirect('/home');
 });
 
+app.get('/health', (req, res) => {
+    res.json({ status: 200, message: "Server is running" });
+});
+
 
 app.get('/home', function (req, res) {
     res.sendFile(__dirname + "/routes/home.html");
