@@ -7,7 +7,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "'CI=false npm install",
+    "build": "CI=false npm install",
     "start": "node ./bin/www"
   },
   "engines": {
