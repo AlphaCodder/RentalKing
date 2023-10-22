@@ -1,9 +1,0 @@
-[build]
-builder = "docker"
-buildCommand = "docker build . -t xstatic/rental-king"
-
-[deploy]
-startCommand = "docker run -p 3000:3000 -d xstatic/rental-king"
-healthcheckPath = "/health"
-healthcheckTimeout = 10
-restartPolicyType = "never"
