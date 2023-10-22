@@ -40,7 +40,7 @@ body {
 }
 
 #l1 {
-  height: 65vh;
+  height: 40vw;
   margin: 0px 0px auto;
 }
 
@@ -52,6 +52,11 @@ p {
   section {
     padding: 150px 0;
   }
+
+  #text-center {
+    width: 100%;
+  }
+
 }
 
 ::-moz-selection {
@@ -127,4 +132,12 @@ img::-moz-selection {
     font-size: 1.25rem;
     padding: 12px;
   }
+}
+
+@media (max-width: 560px) {
+  #l1 {
+    height: 50vw;
+    margin: 0px 0px auto;
+  }
+
 }

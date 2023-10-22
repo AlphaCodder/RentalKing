@@ -228,6 +228,12 @@ p{
 }
 
 
+.col-lg-5{
+    max-width: 100% !important;
+}
+
+
+
 #b1 {
     height: 40px;
     width: 130px;

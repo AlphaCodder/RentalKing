@@ -74,7 +74,7 @@ app.get('/home', function (req, res) {
 app.use('/admin', adminRouter);
 app.use('/electric', electricRouter);
 app.use('/gas', gasRouter);
-app.use('/contact', contactRouter);
+app.use('/contact', contactRouter);  
 
 
 
