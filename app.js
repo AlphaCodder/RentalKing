@@ -5,7 +5,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const exphbs = require('express-handlebars');
-const mongoose = require('mongoose');
+const db = require('./utils/db')
 const compression = require('compression');
 
 const electricRouter = require('./routes/electric_index');
@@ -13,26 +13,8 @@ const gasRouter = require('./routes/gas_index');
 const adminRouter = require('./routes/admin');
 const contactRouter = require('./routes/contact_index');
 var UserModel = require("./models/CustomerModel");
+
 const app = express();
-
-
-//Connecting to Mongodb
-const db = async () => {
-    try {
-        const conn = await mongoose.connect(process.env.MONGO_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false
-        });
-
-        console.log("MongoDB connected");
-
-    } catch (err) {
-        console.log("MongoDB Error : Failed to connect");
-        console.log(err);
-        // process.exit(1);
-    }
-}
 
 db();
 
@@ -54,7 +36,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 
-console.log(`App running on http://localhost:${process.env.PORT}`);
+if(process.env.NODE_ENV !== 'production') {
+    console.log(`App running on http://localhost:${process.env.PORT}`);
+}
 
 
 // Routing
