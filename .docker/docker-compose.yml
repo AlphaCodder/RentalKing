@@ -1,0 +1,14 @@
+services:
+  rentalking-app:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ../db_data:/app/db_data
+    restart: unless-stopped
+    depends_on:
+      - mongodb
