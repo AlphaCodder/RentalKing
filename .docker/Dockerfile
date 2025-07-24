@@ -9,6 +9,6 @@ RUN bun install --frozen-lockfile
 # Copy source code
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["bun", "run", "./bin/www"]

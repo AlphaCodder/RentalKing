@@ -1,4 +1,5 @@
 # RentalKing - Rental Car Buying Website
+
 ![RentalKing Logo](public/images/t1.png)
 
 RentalKing is a React app that serves as a rental car buying website, offering both gas and electric car options. This project utilizes MongoDB Atlas as the database solution and is deployed on the Railway cloud platform.
@@ -28,7 +29,7 @@ RentalKing is a React app that serves as a rental car buying website, offering b
 Make sure you have the following software installed on your system:
 
 - Node.js (version 14 or higher)
-- npm (Node package manager)
+- bun (JavaScript runtime)
 - MongoDB Atlas account (for database)
 - Railway account (for deployment)
 
@@ -74,10 +75,10 @@ npm install
 To start the application locally, run the following command:
 
 ```bash
-npm start
+bun start
 ```
 
-Open your browser and visit `http://localhost:3000` to access the RentalKing application.
+Open your browser and visit `http://localhost:8080` to access the RentalKing application.
 
 ## Deployment
 
